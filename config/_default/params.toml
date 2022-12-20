@@ -1,0 +1,152 @@
+# Pages placed under these sections will be shown on homepage and archive page.
+mainSections = [ "post" ]
+featuredImageField = "image"
+# favicon = "/favicon.ico"
+favicon = "/img/favicon.ico"
+# Output page's full content in RSS.
+rssFullContent = true
+
+[footer]
+since = 2022
+customText = ""
+
+[dateFormat]
+published = "Jan 02, 2006"
+lastUpdated = "Jan 02, 2006 15:04 MST"
+
+[sidebar]
+emoji = ""
+subtitle = "Writing about DevOps, Cloud, and FOSS."
+
+[sidebar.avatar]
+enabled = true
+local = true
+src = "img/avatar.png"
+
+[article]
+math = false
+readingTime = true
+toc = true
+
+[article.license]
+enabled = false
+default = "Licensed under CC BY-NC-SA 4.0"
+
+## Widgets
+[[widgets.homepage]]
+type = "search"
+
+[[widgets.homepage]]
+type = "archives"
+
+[widgets.homepage.params]
+limit = 5
+
+[[widgets.homepage]]
+type = "categories"
+
+[widgets.homepage.params]
+limit = 10
+
+[[widgets.homepage]]
+type = "tag-cloud"
+
+[widgets.homepage.params]
+limit = 10
+
+[[widgets.page]]
+type = "toc"
+
+[opengraph.twitter]
+site = "DecisiveDevops"
+card = "summary_large_image"
+
+[defaultImage.opengraph]
+enabled = false
+local = false
+src = ""
+
+[colorScheme]
+toggle = true
+default = "auto"
+
+[imageProcessing.cover]
+enabled = true
+
+[imageProcessing.content]
+enabled = true
+
+## Comments
+[comments]
+enabled = true
+provider = "cusdis"
+
+[comments.disqusjs]
+shortname = ""
+apiUrl = ""
+apiKey = ""
+admin = ""
+adminLabel = ""
+
+[comments.utterances]
+repo = ""
+issueTerm = "pathname"
+label = ""
+
+[comments.remark42]
+host = ""
+site = ""
+locale = ""
+
+[comments.vssue]
+platform = ""
+owner = ""
+repo = ""
+clientId = ""
+clientSecret = ""
+autoCreateIssue = false
+
+[comments.waline]
+serverURL = ""
+lang = ""
+visitor = ""
+avatar = ""
+emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
+requiredMeta = ["name", "email", "url"]
+placeholder = ""
+
+[comments.waline.locale]
+admin = "Admin"
+
+[comments.twikoo]
+envId = ""
+region = ""
+path = ""
+lang = ""
+
+[comments.cactus]
+defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
+serverName = "cactus.chat"
+siteName = ""
+
+[comments.giscus]
+repo = "decisivedevops/decisivedevops-blog"
+repoID = "R_kgDOIl_80Q"
+category = "General"
+categoryID = "DIC_kwDOIl_80c4CTBGB"
+mapping = "pathname"
+lightTheme = "light"
+darkTheme = "dark"
+reactionsEnabled = 0
+emitMetadata = 0
+
+[comments.gitalk]
+owner = ""
+admin = ""
+repo = ""
+clientID = ""
+clientSecret = ""
+
+[comments.cusdis]
+host = "https://cusdis.com"
+id = "b6c943ac-2ee0-43b9-8267-3f99570c056c"

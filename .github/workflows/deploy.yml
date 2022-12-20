@@ -1,0 +1,50 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - uses: actions/setup-go@v2
+        with:
+            go-version: "^1.18.0"
+
+      - name: Setup Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.108.0/hugo_extended_0.108.0_linux-amd64.tar.gz -O hugo_extended.tar.gz
+          tar xvf hugo_extended.tar.gz
+          sudo mv hugo /usr/local/bin/hugo
+
+      - name: Build
+        run: hugo --minify --gc
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'public'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

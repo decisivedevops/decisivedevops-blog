@@ -1,0 +1,7 @@
+# Uncomment this file to enable multilanguage site support
+
+[en]
+languageName = "English"
+title = "Decisive DevOps"
+description = "Writing about DevOps, Cloud, and FOSS."
+weight = 1
